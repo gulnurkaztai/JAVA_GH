@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JAVA_GH.iml" filepath="$PROJECT_DIR$/JAVA_GH.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OCRarch/OCRarch.iml" filepath="$PROJECT_DIR$/OCRarch/OCRarch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week_2/Week_2.iml" filepath="$PROJECT_DIR$/Week_2/Week_2.iml" />
+    </modules>
+  </component>
+</project>

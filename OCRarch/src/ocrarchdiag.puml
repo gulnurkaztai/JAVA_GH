@@ -1,0 +1,37 @@
+@startuml CanadaPostOCR
+
+skinparam componentStyle uml2
+skinparam backgroundColor white
+
+package "Mobile Application" {
+    package "Presentation Layer" {
+        [User Interface] as UI
+    }
+
+    package "Core Processing" {
+        [Preprocessor] as PRE
+        [OCR Machine] as OCR
+        [JSON Output] as JSON
+    }
+
+    package "Camera Layer" {
+        [Camera Service] as CS
+    }
+
+    package "Data Layer" {
+        [Process Image] as PI
+        [Recognize Text] as RT
+    }
+
+ UI --> CS
+ CS --> PRE
+ PRE --> OCR
+ OCR --> PI
+ PI --> RT
+ RT --> JSON
+ JSON --> UI
+
+}
+
+
+@enduml

@@ -1,0 +1,50 @@
+@startuml CanadaPostOCR
+
+skinparam componentStyle uml2
+skinparam backgroundColor white
+
+package "Mobile Application" {
+    package "Presentation Layer" {
+        [Camera Preview] as CP
+        [JSON Display] as JD
+        [Error Handler UI] as EH
+    }
+
+    package "Business Logic" {
+        [Label Scanner] as LS
+        [OCR Manager] as OCR
+        [Debounce Controller] as DC
+        [JSON Generator] as JG
+    }
+
+    package "Data Processing" {
+        [Text Recognition] as TR
+        [Barcode Reader] as BR
+        [Address Extractor] as AE
+        [Damage Handler] as DH
+    }
+
+    package "Device Integration" {
+        [Camera Controller] as CC
+        [Auto Focus] as AF
+        [Zoom Controller] as ZC
+    }
+}
+
+' Define Relationships
+CP --> LS
+LS --> OCR
+OCR --> TR
+OCR --> BR
+TR --> AE
+DH --> TR
+DC --> LS
+LS --> CC
+CC --> AF
+CC --> ZC
+OCR --> JG
+JG --> JD
+EH --> LS
+
+@enduml
+
